@@ -46,6 +46,8 @@ $PROTOC -Isrc --csharp_out=csharp/src/Google.Protobuf \
     src/google/protobuf/wrappers.proto \
     src/google/protobuf/compiler/plugin.proto
 
+# TODO include language feature proto deps?
+
 # Test protos
 # Note that this deliberately does *not* include old_extensions1.proto
 # and old_extensions2.proto, which are generated with an older version
