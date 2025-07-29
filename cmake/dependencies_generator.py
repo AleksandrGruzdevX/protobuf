@@ -47,6 +47,12 @@ class ExtensionFunctions(object):
     pass
 
 
+class RepoRuleLambda(object):
+
+  def defaults(self, *args, **kwargs):
+    pass
+
+
 class ModuleFileFunctions(object):
   """A fake MODULE file that we can exec() to get the functions we need."""
 
@@ -74,7 +80,7 @@ class ModuleFileFunctions(object):
     pass
 
   def use_repo_rule(self, *args, **kwargs):
-    pass
+    return RepoRuleLambda()
 
   def single_version_override(self, *args, **kwargs):
     pass
