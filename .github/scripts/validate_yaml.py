@@ -9,14 +9,12 @@ import re
 import yaml
 
 # Ensure every job is in the list of blocking jobs.
+yaml_files = []
 with open(
     os.path.join(os.path.dirname(__file__), '../workflows/test_runner.yml'), 'r'
 ) as f:
   data = yaml.safe_load(f)
-
   # List of all YAML files that are used by jobs in the test_runner.yml file.
-  yaml_files = []
-
   # Get a list of all jobs in the test_runner, except for the blocking job and
   # the tag removal job, which is not always run.
   all_jobs = list(data['jobs'].keys())
